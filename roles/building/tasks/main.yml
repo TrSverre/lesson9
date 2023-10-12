@@ -1,7 +1,7 @@
 ---
 # tasks file for building
 - name: git clone 
-  git: repo = {{git_url}} dest={{dest_folder_git}}
+  git: repo = 'https://github.com/jetty-project/embedded-jetty-live-war' dest={{dest_folder_git}}
 - name: building
   command: mvn package
   args:
