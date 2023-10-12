@@ -1,5 +1,5 @@
 ---
 # defaults file for building
-git_url: https://github.com/jetty-project/embedded-jetty-live-war.git
+#git_url: https://github.com/jetty-project/embedded-jetty-live-war.git
 dest_folder_git: /home/user/git
 dest_folder_var: var/lib/tomcat9/webapps
