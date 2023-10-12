@@ -2,11 +2,10 @@
 # tasks file for building
 - name: git clone 
   git:
-    repo: '{{git_url}}'
-    dest: {{dest_folder_git}}
+    repo = '{{git_url}}' dest={{dest_folder_git}}
 - name: building
   command: mvn package
   args:
-    chdir: {{dest_folder_git}}
+    chdir: "{{dest_folder_git}}"
 - name: copy war
   fetch: src ={{dest_folder_git}}/livewar-assembly/target/livewar-example.war dest = {{dest_folder_var}}/livewar-example.war flat=true
