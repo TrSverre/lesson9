@@ -1,0 +1,4 @@
+---
+# defaults file for webserver
+dest_folder: /var/lib/tomcat9/webapps
+

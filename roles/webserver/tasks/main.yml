@@ -1,0 +1,14 @@
+---
+# tasks file for webserver
+- name: install tomcat
+  apt:
+    name: tomcat9
+    state: present
+- name: tomcat started
+  service:
+    name: tomcat9
+    state: started
+- name: copy war
+  copy: src={{dest_folder}}/livewar-example.war dest={{dest_folder}}/ 
+  notify:
+    - restart tomcat

@@ -1,0 +1,9 @@
+---
+# tasks file for common
+- name: install packs
+  apt: name={{item}} state=present
+  with_irems:
+       - default-jdk
+       - maven
+       - git
+

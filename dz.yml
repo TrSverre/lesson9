@@ -1,1 +1,13 @@
-1
+- name: buildi conf
+  hosts: db
+  become: yes
+
+  roles:
+   - common
+   - building
+- name: web-service 
+  hosts: web
+  become: yes
+
+  roles:
+    - webserver
